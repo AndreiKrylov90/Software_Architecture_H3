@@ -2,7 +2,7 @@ import java.awt.*;
 
 public class Harvester extends Car {
 
-    public Harvester(String make, String model, Color color) {
+    public Harvester(String make, String model, String color) {
         super(make, model, color);
         wheelsCount = 6;
     }

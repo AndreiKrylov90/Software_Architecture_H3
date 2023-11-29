@@ -8,7 +8,7 @@ public class RefuelingStationV2 implements Refueling {
     }
 
     @Override
-    public void fuel(FuelType fuelType) {
-        processCarFuel(fuelType);
+    public void fuel(Car car) {
+        processCarFuel(car.getFuelType());
     }
 }

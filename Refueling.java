@@ -6,5 +6,5 @@ public interface Refueling {
     /**
      * Заправка
      */
-    void fuel(FuelType fuelType);
+    void fuel(Car car);
 }

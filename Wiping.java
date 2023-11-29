@@ -1,7 +1,7 @@
 public interface Wiping {
 
-    void wipMirrors();
-    void wipWindshield();
-    void wipHeadlights();
+    void wipMirrors(Car car);
+    void wipWindshield(Car car);
+    void wipHeadlights(Car car);
 
 }

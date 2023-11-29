@@ -55,7 +55,7 @@ public abstract class Car {
 
     //region Конструкторы
 
-    public Car(String make, String model, Color color) {
+    public Car(String make, String model, String color) {
         this.make = make;
         this.model = model;
         this.color = color;
@@ -66,18 +66,30 @@ public abstract class Car {
 
     //region Методы
 
+    public String getModel() {
+        return model;
+    }
+
+    public FuelType getFuelType() {
+        return fuelType;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
     public void setRefuelingStation(Refueling refuelingStation) {
         this.refueling = refuelingStation;
     }
 
-    /**
-     * Заправить автомобиль
-     */
-    public void fuel() {
-        if (refueling != null){
-            refueling.fuel(fuelType);
-        }
-    }
+    // /**
+    //  * Заправить автомобиль
+    //  */
+    // public void fuel() {
+    //     if (refueling != null){
+    //         refueling.fuel(fuelType);
+    //     }
+    // }
 
     public int getWheelsCount() {
         return wheelsCount;
@@ -85,6 +97,7 @@ public abstract class Car {
 
     // Движение
     public abstract void movement();
+
     // Обслуживание
     public abstract void maintenance();
     // Переключение передач
@@ -101,6 +114,11 @@ public abstract class Car {
         return fogLights;
     }
 
+    public void movement(int dictance) {
+        System.out.println("Your " + color + " " + model + " has driven " + dictance + " kilometers");
+    }
+
+
     //endregion
 
     //region Поля
@@ -114,7 +132,7 @@ public abstract class Car {
     private String model;
 
     // Цвет
-    private Color color;
+    private String color;
 
     // Тип
     protected CarType type;
